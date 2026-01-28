@@ -1,72 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Boulevard — Verdulería</title>
-  <meta name="description" content="Verdulería Boulevard: frutas y verduras frescas. Pedidos por WhatsApp. Promos, combos y delivery." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verdulería Boulevard</title>
   <style>
-    :root{
-      --bg:#f6fbf8;
-      --card:#ffffff;
-      --text:#1f2a24;
-      --muted:#5a6a61;
-      --brand:#6fbf9d;     /* verde suave */
-      --brand2:#4a8f6a;
-      --accent:#ffb703;
-      --shadow: 0 12px 30px rgba(18, 38, 28, .10);
-      --ring: 0 0 0 4px rgba(111,191,157,.18);
-      --radius:16px;
-      --radius2:24px;
-      --max:1100px;
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
     body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-      color:var(--text);
-      background: radial-gradient(1200px 600px at 50% -200px, rgba(111,191,157,.35), transparent 60%),
-                  linear-gradient(#ffffff, var(--bg));
+      margin:0; font-family: Arial, sans-serif; background:#f6fbf8; color:#1f2a24;
     }
-    a{color:inherit}
-    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
-    .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:12px 16px; border-radius:999px;
-      text-decoration:none; font-weight:700;
-      border:1px solid rgba(31,42,36,.10);
-      background:var(--card);
-      box-shadow: 0 6px 18px rgba(18,38,28,.08);
-      transition:.2s transform, .2s box-shadow, .2s background;
-      cursor:pointer;
+    header{
+      background:#6fbf9d; color:#fff; padding:32px 16px; text-align:center;
     }
-    .btn:hover{transform:translateY(-1px); box-shadow:0 10px 24px rgba(18,38,28,.12)}
-    .btn.primary{
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      color:#fff; border:none;
+    section{max-width:900px; margin:auto; padding:24px 16px;}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px;}
+    .card{background:#fff; border-radius:12px; padding:16px; box-shadow:0 8px 20px rgba(0,0,0,.08);}
+    footer{background:#6fbf9d; color:#fff; text-align:center; padding:16px;}
+    .wa{
+      position:fixed; right:16px; bottom:16px; background:#25d366; color:#fff;
+      padding:14px 18px; border-radius:999px; text-decoration:none; font-weight:bold;
     }
-    .btn.primary:hover{filter:saturate(1.05)}
-    .btn.ghost{background:transparent}
-    .pill{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 12px; border-radius:999px;
-      background: rgba(111,191,157,.12);
-      border:1px solid rgba(111,191,157,.25);
-      color: var(--brand2);
-      font-weight:700;
-      font-size:14px;
-    }
+  </style>
+</head>
+<body>
 
-    /* NAV */
-    .nav{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background: rgba(255,255,255,.75);
-      border-bottom:1px solid rgba(31,42,36,.08);
-    }
-    .nav-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:12px 0;
-   
+<header>
+  <h1>Verdulería Boulevard</h1>
+  <p>Frutas y verduras frescas todos los días 🥬🍎</p>
+</header>
+
+<section>
+  <h2>Productos</h2>
+  <div class="grid">
+    <div class="card"><h3>Verduras</h3><p>Frescas y de estación</p></div>
+    <div class="card"><h3>Frutas</h3><p>Seleccionadas</p></div>
+    <div class="card"><h3>Combos</h3><p>Precios especiales</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Horarios</h2>
+  <p>Lunes a Sábado: 8:00 a 20:00</p>
+</section>
+
+<footer>
+  <p>© Verdulería Boulevard</p>
+</footer>
+
+<a class="wa" href="https://wa.me/549TU_NUMERO" target="_blank">WhatsApp</a>
+
+</body>
+</html>
